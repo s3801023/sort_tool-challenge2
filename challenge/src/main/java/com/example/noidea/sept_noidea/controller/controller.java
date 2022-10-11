@@ -31,7 +31,7 @@ public class controller {
         List<UserDao> userList = userDao.getAllUser();
         return ResponseEntity.ok().header("OK!").body(userList);
     }
-    //get by userid
+    //get by id
     @GetMapping("/get/{id}")
     @ResponseBody
     public ResponseEntity<Object> getUserbyId(@PathVariable("id") int id){
