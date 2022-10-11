@@ -20,4 +20,12 @@ public class controller {
     @Autowired
     private UserServiceImpl userDao;
 
+    //create
+    @PostMapping("/create")
+    public ResponseEntity<Object> createUser(@RequestBody UserDao user){
+        userDao.addUser(user);
+        return ResponseEntity.ok("Created!");
+    }
+
+
 }
